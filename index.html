@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>My Books</title>
+</head>
+<body>
+    <header class="navbar-main">
+        <div id="logo">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="24" height="24"/>
+                <path d="M12 6.90909C10.8999 5.50893 9.20406 4.10877 5.00119 4.00602C4.72513 3.99928 4.5 4.22351 4.5 4.49965C4.5 6.54813 4.5 14.3034 4.5 16.597C4.5 16.8731 4.72515 17.09 5.00114 17.099C9.20405 17.2364 10.8999 19.0998 12 20.5M12 6.90909C13.1001 5.50893 14.7959 4.10877 18.9988 4.00602C19.2749 3.99928 19.5 4.21847 19.5 4.49461C19.5 6.78447 19.5 14.3064 19.5 16.5963C19.5 16.8724 19.2749 17.09 18.9989 17.099C14.796 17.2364 13.1001 19.0998 12 20.5M12 6.90909L12 20.5" stroke="#000" stroke-linejoin="round"/>
+                <path d="M19.2353 6H21.5C21.7761 6 22 6.22386 22 6.5V19.539C22 19.9436 21.5233 20.2124 21.1535 20.0481C20.3584 19.6948 19.0315 19.2632 17.2941 19.2632C14.3529 19.2632 12 21 12 21C12 21 9.64706 19.2632 6.70588 19.2632C4.96845 19.2632 3.64156 19.6948 2.84647 20.0481C2.47668 20.2124 2 19.9436 2 19.539V6.5C2 6.22386 2.22386 6 2.5 6H4.76471" stroke="#000" stroke-linejoin="round"/>
+            </svg>
+            <h1>MyBooks!</h1>
+        </div>
+        <div class="main-search">
+            <input class="search-field" type="text" name="q" autocomplete="off" placeholder="Search for Products" value="">
+            <button type="submit">
+                <svg width="24" height="24" class="" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><title>Search Icon</title><path d="M10.5 18C14.6421 18 18 14.6421 18 10.5C18 6.35786 14.6421 3 10.5 3C6.35786 3 3 6.35786 3 10.5C3 14.6421 6.35786 18 10.5 18Z" stroke="#717478" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M16 16L21 21" stroke="#717478" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </button>
+        </div>
+        <button type="button" class="btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"></path>
+                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"></path>
+            </svg>
+            Login
+        </button>
+        <button type="button" class="btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="cart" viewBox="0 0 16 16">
+                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+            </svg>
+            Cart
+        </button>
+        <button type="button" class="btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="truck" viewBox="0 0 16 16">
+                <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A2 2 0 0 1 4.732 11h5.536a2 2 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456M12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2"></path>
+            </svg>
+            Track Orders
+        </button>
+    </header>
+    <section id="products">
+        <div class="carousel">
+            <div class="carousel-container">
+                <div class="carousel-slide" id="carousel-slide">
+                    <!-- Images will be rendered here by JavaScript -->
+                </div>
+            </div>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+        <div id="prod-items">
+            <div class="card">
+                <div class="card-heart">❤</div>
+                <div class="item-pic-container">
+                    <img src="./img/book_rs_35.jpg" alt="Long size note book">
+                </div>
+                <div class="card-body">
+                    <h2 class="card-title">Long size note book</h2>
+                    <div class="card-tags">
+                        <div class="card-tag">🗐 120 pages</div>
+                        <div class="card-tag">30% off!</div>
+                    </div>
+                    <div class="card-description">
+                        <ul>
+                            <li>Unrulled</li>
+                            <li>120 pages</li>
+                            <li>Size 31 × 19 cm</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-price-des">
+                            <span class="card-discount">-30%</span>
+                            <span class="card-price">₹35</span>
+                            <span class="card-mrp">M.R.P.: ₹50</span>
+                        </div>
+                        <button class="card-button">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-heart">❤</div>
+                <div class="item-pic-container">
+                    <img src="./img/book_rs_38.jpg" alt="Long size note book">
+                </div>
+                <div class="card-body">
+                    <h2 class="card-title">Long size note book</h2>
+                    <div class="card-tags">
+                        <div class="card-tag">🗐 132 pages</div>
+                        <div class="card-tag">41% off!</div>
+                    </div>
+                    <div class="card-description">
+                        <ul>
+                            <li>Unrulled</li>
+                            <li>132 pages</li>
+                            <li>Size 31 × 19 cm</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-price-des">
+                            <span class="card-discount">-41%</span>
+                            <span class="card-price">₹38</span>
+                            <span class="card-mrp">M.R.P.: ₹65</span>
+                        </div>
+                        <button class="card-button">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-heart">❤</div>
+                <div class="item-pic-container">
+                    <img src="./img/book_rs_50.jpg" alt="Long size note book">
+                </div>
+                <div class="card-body">
+                    <h2 class="card-title">Long size note book</h2>
+                    <div class="card-tags">
+                        <div class="card-tag">🗐 156 pages</div>
+                        <div class="card-tag">16% off!</div>
+                    </div>
+                    <div class="card-description">
+                        <ul>
+                            <li>Unrulled</li>
+                            <li>156 pages</li>
+                            <li>Size 31 × 19 cm</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-price-des">
+                            <span class="card-discount">-16%</span>
+                            <span class="card-price">₹50</span>
+                            <span class="card-mrp">M.R.P.: ₹60</span>
+                        </div>
+                        <button class="card-button">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-heart">❤</div>
+                <div class="item-pic-container">
+                    <img src="./img/eraser.png" alt="Long size note book">
+                </div>
+                <div class="card-body">
+                    <h2 class="card-title">Apsara Non-Dust Eraser</h2>
+                    <div class="card-tags">
+                        <div class="card-tag">🧼 Eraser</div>
+                    </div>
+                    <div class="card-description">
+                        <ul>
+                            <li>1 Eraser</li>
+                            <li>Non-Dust Eraser</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-price-des">
+                            <span class="card-discount"></span>
+                            <span class="card-price">₹3</span>
+                            <span class="card-mrp">M.R.P.: ₹3</span>
+                        </div>
+                        <button class="card-button">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-heart">❤</div>
+                <div class="item-pic-container">
+                    <img src="./img/book.jpg" alt="Long size note book">
+                </div>
+                <div class="card-body">
+                    <h2 class="card-title">Long size note book</h2>
+                    <div class="card-tags">
+                        <div class="card-tag">🗐 120 pages</div>
+                        <div class="card-tag">30% off!</div>
+                    </div>
+                    <div class="card-description">
+                        <ul>
+                            <li>Unrulled</li>
+                            <li>120 pages</li>
+                            <li>Size 31 × 19 cm</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-price-des">
+                            <span class="card-discount">-30%</span>
+                            <span class="card-price">₹35</span>
+                            <span class="card-mrp">M.R.P.: ₹50</span>
+                        </div>
+                        <button class="card-button">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./index.js"></script>
+</body>
+</html>
